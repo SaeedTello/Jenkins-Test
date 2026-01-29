@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'aws-agent'
+        label 'static-agent'
     }
     stages{
         stage('build'){
