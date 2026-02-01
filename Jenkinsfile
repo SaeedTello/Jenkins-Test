@@ -18,7 +18,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'deploy in progress...'
+                echo 'deploy in progress.00..'
             }
         }
     }
