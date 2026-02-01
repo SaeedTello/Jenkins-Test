@@ -1,4 +1,4 @@
-pipline{
+pipeline{
     agent ('static-agent'){
         stages{
             stage('Build'){
