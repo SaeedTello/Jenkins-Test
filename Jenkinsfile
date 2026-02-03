@@ -30,7 +30,7 @@ pipeline {
     }
     post {
         success {
-            slackSend channel: '#jenkins-channel', color: '#b40078', message: "Build Success - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'jenkinsworksp-ieq7351', tokenCredentialId: 'slack-notifiy'
+            slackSend channel: '#all-jenkins-workspace', color: '#b40078', message: "Build Success - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'jenkinsworksp-ieq7351', tokenCredentialId: 'slack-notifiy'
         }
         failure {
             slackSend channel: '#all-jenkins-workspace', color: '#b40078', message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'jenkinsworksp-ieq7351', tokenCredentialId: 'slack-notifiy'
