@@ -7,12 +7,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'build in progress...'
+                sh 'node -v'
+
             }
         }
 
         stage('Test') {
             steps {
                 echo 'test in progress...'
+                sh 'npm -v'
             }
         }
 
