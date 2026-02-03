@@ -2,6 +2,10 @@ pipeline {
     agent {
         label 'static-agent'
     }
+    tools {
+        nodejs 'nodejs-setup'
+        maven 'maven-setup'
+    }
 
     stages {
         stage('Build') {
@@ -15,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'test in progress...'
-                sh 'npm -v'
+                sh 'mvn -v'
             }
         }
 
